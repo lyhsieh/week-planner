@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">weed planter</string>
+    <string name="today_you_need_to">Today, you need to</string>
+    <string name="name">Name</string>
+    <string name="background">background</string>
+    <string name="time">Time</string>
+    <string name="enter_your_time_here">Enter your time here</string>
+    <string name="enter_the_name_of_the_event_here">Enter the name of the event here</string>
+    <string name="description">Description</string>
+    <string name="enter_the_description_here">Enter the description here</string>
+    <string name="enter_tour_time_here">Enter tour time here</string>
+    <string name="todo">TODO</string>
+    <string name="rs">rs</string>
+    <string name="ranking_system">Ranking System</string>
+    <string name="congratulations">Congratulations!</string>
+    <string name="you_get">You get:</string>
+    <string name="fruit_you_get">fruit you get</string>
+    <string name="walk_the_dog">Walk the dog</string>
+    <string name="_2_00_pm_today">2:00 pm today</string>
+    <string name="walk_my_little_dog_bowen_at_xinfu_park">Walk my little dog, Bowen, at XinFu Park.</string>
+    <string name="finish">Finish</string>
+    <string name="my_garden">My garden</string>
+    <string name="delete">Delete</string>
+    <string name="save">Save</string>
+    <string name="back">Back</string>
+    <string name="week_nmode">Week\nmode</string>
+    <string name="my_ngarden">My\nGarden</string>
+    <string name="add_an_nevent">Add an\nevent</string>
+</resources>

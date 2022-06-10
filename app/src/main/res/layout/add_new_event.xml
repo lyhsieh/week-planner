@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="290dp"
+        android:layout_marginBottom="630dp"
+        android:text="@string/name"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/time"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@id/name_text_input"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="@id/textView2"
+        tools:layout_editor_absoluteY="185dp" />
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/description"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@id/time_text_input"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="@id/textView2"
+        tools:layout_editor_absoluteY="354dp" />
+
+    <EditText
+        android:id="@+id/description_text_input"
+        android:layout_width="304dp"
+        android:layout_height="52dp"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        android:hint="@string/enter_the_description_here"/>
+
+    <EditText
+        android:id="@+id/time_text_input"
+        android:layout_width="304dp"
+        android:layout_height="52dp"
+        android:hint="@string/enter_tour_time_here"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@id/textView3"
+        tools:layout_editor_absoluteY="245dp" />
+
+    <EditText
+        android:id="@+id/name_text_input"
+        android:layout_width="304dp"
+        android:layout_height="52dp"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        android:hint="@string/enter_the_name_of_the_event_here"
+        />
+
+    <Button
+        android:id="@+id/button_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/delete"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="40dp"
+        android:layout_marginStart="40dp"
+        />
+
+    <Button
+        android:id="@+id/button_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="40dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
