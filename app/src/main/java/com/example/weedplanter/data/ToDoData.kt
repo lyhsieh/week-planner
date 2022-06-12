@@ -11,5 +11,6 @@ data class ToDoData(
     @PrimaryKey(autoGenerate = true)
     var id: Int,
     var title: String,
+    var time: String,
     var description: String
 ): Parcelable
