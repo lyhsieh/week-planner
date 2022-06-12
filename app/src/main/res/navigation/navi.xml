@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navi"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/congratsFragment"
+        android:name="com.example.weedplanter.CongratsFragment"
+        android:label="congrats"
+        tools:layout="@layout/congrats" />
+    <fragment
+        android:id="@+id/addNewEventFragment"
+        android:name="com.example.weedplanter.AddNewEventFragment"
+        android:label="AddNewEventFragment" >
+        <action
+            android:id="@+id/action_addNewEventFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.weedplanter.MainFragment"
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_addNewEventFragment"
+            app:destination="@id/addNewEventFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_eventDetailFragment"
+            app:destination="@id/eventDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rsFragment"
+        android:name="com.example.weedplanter.RsFragment"
+        android:label="RsFragment" />
+    <fragment
+        android:id="@+id/eventDetailFragment"
+        android:name="com.example.weedplanter.EventDetailFragment"
+        android:label="EventDetailFragment" >
+        <action
+            android:id="@+id/action_eventDetailFragment_to_congratsFragment"
+            app:destination="@id/congratsFragment" />
+    </fragment>
+</navigation>
