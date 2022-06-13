@@ -14,6 +14,9 @@
         <action
             android:id="@+id/action_listFragment_to_myGardenFragment"
             app:destination="@id/myGardenFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_eventDetailFragment"
+            app:destination="@id/eventDetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/addNewEventFragment"
@@ -31,5 +34,13 @@
         <action
             android:id="@+id/action_myGardenFragment_to_listFragment"
             app:destination="@id/listFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/eventDetailFragment"
+        android:name="com.example.weedplanter.EventDetailFragment"
+        android:label="EventDetailFragment" >
+        <argument
+        android:name="data"
+        app:argType="integer" />
     </fragment>
 </navigation>

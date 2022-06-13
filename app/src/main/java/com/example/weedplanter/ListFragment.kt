@@ -1,6 +1,7 @@
 package com.example.weedplanter
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.example.weedplanter.data.ToDoData
 import com.example.weedplanter.data.ToDoViewModel
 import com.example.weedplanter.databinding.DayModeBinding
 
@@ -36,7 +38,13 @@ class ListFragment : Fragment() {
         setupRecyclerview()
         return binding.root
     }
-
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.apply {
+            lifecycleOwner = viewLifecycleOwner
+            listFragment = this@ListFragment
+        }
+    }
     private fun setupRecyclerview() {
         val recyclerView = binding.recycleView
         recyclerView.adapter = adapter
@@ -53,7 +61,18 @@ class ListFragment : Fragment() {
     fun addNewEvent() {
         findNavController().navigate(R.id.action_listFragment_to_addNewEventFragment)
     }
-
+    fun reset() {
+        mToDoViewModel.deleteAll()
+    }
+    fun detail(Id: Int) {
+        Log.e("E","hello")
+        val action = ListFragmentDirections.actionListFragmentToEventDetailFragment(Id)
+        findNavController().navigate(action)
+    }
+    fun detail0() {
+        Log.e("E","hello")
+        findNavController().navigate(R.id.action_listFragment_to_eventDetailFragment)
+    }
     fun myGarden() {
         findNavController().navigate(R.id.action_listFragment_to_myGardenFragment)
     }

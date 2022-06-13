@@ -25,6 +25,9 @@ interface ToDoDao {
     @Query("SELECT * FROM todo_table WHERE title LIKE :searchQuery")
     fun searchDatabase(searchQuery: String) : LiveData<List<ToDoData>>
 
+    @Query("SELECT * FROM todo_table WHERE id LIKE :searchQuery")
+    fun searchByIdDatabase(searchQuery: Int) : LiveData<ToDoData>
+
     @Query("SELECT * FROM todo_table ORDER BY time")
     fun sortByTime(): LiveData<List<ToDoData>>
 }
