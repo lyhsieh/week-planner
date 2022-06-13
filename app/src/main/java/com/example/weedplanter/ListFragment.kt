@@ -20,21 +20,17 @@ class ListFragment : Fragment() {
     private val binding get() = _binding!!
     private val sharedViewModel: ToDoViewModel by activityViewModels()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         _binding = DayModeBinding.inflate(inflater, container, false)
-        val root = binding.root
-        return root
+        _binding!!.listFragment = this@ListFragment
+        return binding.root
     }
 
     fun addNewEvent() {
-        // TODO: Navigate to the CheckoutFragment
         findNavController().navigate(R.id.action_listFragment_to_addNewEventFragment)
     }
 
