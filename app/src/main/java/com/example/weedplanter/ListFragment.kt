@@ -27,7 +27,7 @@ class ListFragment : Fragment() {
     private val binding get() = _binding!!
     private val mToDoViewModel: ToDoViewModel by activityViewModels()
 
-    private val adapter: EventAdapter by lazy { EventAdapter() }
+    // private val adapter: EventAdapter by lazy { EventAdapter() }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -40,13 +40,17 @@ class ListFragment : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.apply {
-            lifecycleOwner = viewLifecycleOwner
-            listFragment = this@ListFragment
-        }
+
     }
     private fun setupRecyclerview() {
         val recyclerView = binding.recycleView
+
+
+        val adapter = EventAdapter { ToDoData ->
+            val action = ListFragmentDirections
+                .actionListFragmentToEventDetailFragment(ToDoData.id)
+            findNavController().navigate(action)
+        }
         recyclerView.adapter = adapter
         recyclerView.layoutManager =
             StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
@@ -55,6 +59,8 @@ class ListFragment : Fragment() {
         ) {
             adapter.setData(it)
         }
+
+
     }
 
 
@@ -69,10 +75,7 @@ class ListFragment : Fragment() {
         val action = ListFragmentDirections.actionListFragmentToEventDetailFragment(Id)
         findNavController().navigate(action)
     }
-    fun detail0() {
-        Log.e("E","hello")
-        findNavController().navigate(R.id.action_listFragment_to_eventDetailFragment)
-    }
+
     fun myGarden() {
         findNavController().navigate(R.id.action_listFragment_to_myGardenFragment)
     }

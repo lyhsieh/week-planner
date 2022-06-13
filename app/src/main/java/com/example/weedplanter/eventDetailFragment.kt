@@ -12,25 +12,25 @@ import androidx.navigation.fragment.navArgs
 import com.example.weedplanter.data.ToDoData
 import com.example.weedplanter.data.ToDoViewModel
 import com.example.weedplanter.databinding.EventDetailBinding
+import kotlin.random.Random
 
 class EventDetailFragment : Fragment() {
 
     private val navigationArgs: EventDetailFragmentArgs by navArgs()
     private var _binding: EventDetailBinding? = null
 
-    // lateinit var  data: LiveData<ToDoData>
+    lateinit var  data: LiveData<ToDoData>
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
-    private val mToDoViewModel: ToDoViewModel by viewModels()
+    private val viewModel = MyGardenViewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         _binding = EventDetailBinding.inflate(inflater, container, false)
-        var dataid: Int = navigationArgs.data
-        // data  = mToDoViewModel.searchByIdDatabase(dataid)
+
         _binding!!.eventDetailFragment = this@EventDetailFragment
         return binding.root
     }
@@ -46,7 +46,11 @@ class EventDetailFragment : Fragment() {
     fun deleteNewEvent() {
         findNavController().navigate(R.id.action_addNewEventFragment_to_listFragment)
     }
+    fun finish() {
 
+
+        findNavController().navigate(R.id.action_eventDetailFragment_to_congratsFragment)
+    }
 
     /**
      * This fragment lifecycle method is called when the view hierarchy associated with the fragment
