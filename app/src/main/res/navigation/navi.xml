@@ -11,6 +11,9 @@
         <action
             android:id="@+id/action_listFragment_to_addNewEventFragment"
             app:destination="@id/addNewEventFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_myGardenFragment"
+            app:destination="@id/myGardenFragment" />
     </fragment>
     <fragment
         android:id="@+id/addNewEventFragment"
@@ -18,6 +21,15 @@
         android:label="AddNewEventFragment" >
         <action
             android:id="@+id/action_addNewEventFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myGardenFragment"
+        android:name="com.example.weedplanter.MyGardenFragment"
+        android:label="fragment_my_garden"
+        tools:layout="@layout/fragment_my_garden" >
+        <action
+            android:id="@+id/action_myGardenFragment_to_listFragment"
             app:destination="@id/listFragment" />
     </fragment>
 </navigation>
