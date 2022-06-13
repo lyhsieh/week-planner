@@ -1,6 +1,7 @@
 package com.example.weedplanter
 
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -54,6 +55,7 @@ class AddNewEventFragment : Fragment() {
                 time = nTime,
                 description = nDescription
             )
+            Log.e("info", "saveNewEvent: title = ${newData.title}")
             mToDoViewModel.insertData(newData)
             Toast.makeText(requireContext(), "Successfully added", Toast.LENGTH_SHORT).show()
             // Navigate back

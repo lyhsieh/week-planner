@@ -1,6 +1,7 @@
 package com.example.weedplanter.data
 
 import android.app.Application
+import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
@@ -15,6 +16,7 @@ class ToDoViewModel(application: Application) : AndroidViewModel(application) {
     val getAllData: LiveData<List<ToDoData>> = repository.getAllData
 
     fun insertData(toDoData: ToDoData) {
+        Log.i("I", "ToDoData = $toDoData")
         viewModelScope.launch(Dispatchers.IO)
         {
             repository.insertData(toDoData)
