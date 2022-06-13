@@ -7,6 +7,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.ItemTouchHelper
+import androidx.recyclerview.widget.ListAdapter
+import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.weedplanter.data.ToDoViewModel
 import com.example.weedplanter.databinding.DayModeBinding
 
@@ -20,15 +24,24 @@ class ListFragment : Fragment() {
     private val binding get() = _binding!!
     private val sharedViewModel: ToDoViewModel by activityViewModels()
 
-
+    private val adapter: EventAdapter by lazy { EventAdapter() }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         _binding = DayModeBinding.inflate(inflater, container, false)
         _binding!!.listFragment = this@ListFragment
+        setupRecyclerview()
         return binding.root
     }
+
+    private fun setupRecyclerview() {
+        val recyclerView = binding.recycleView
+        recyclerView.adapter = adapter
+        recyclerView.layoutManager =
+            StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
+    }
+
 
     fun addNewEvent() {
         findNavController().navigate(R.id.action_listFragment_to_addNewEventFragment)

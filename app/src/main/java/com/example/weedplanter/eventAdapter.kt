@@ -1,5 +1,6 @@
 package com.example.weedplanter
 
+import android.app.Application
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
@@ -11,14 +12,20 @@ import android.view.accessibility.AccessibilityNodeInfo
 import android.widget.Button
 import android.widget.TextView
 import androidx.annotation.RequiresApi
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.weedplanter.data.ToDoData
+import com.example.weedplanter.data.ToDoDatabase
+import com.example.weedplanter.data.ToDoViewModel
 import com.example.weedplanter.databinding.ActivityMainBinding
 import com.example.weedplanter.databinding.RowLayoutBinding
 
-class EventAdapter() : RecyclerView.Adapter<EventAdapter.MyViewHolder>() {
-    var dataList = emptyList<ToDoData>()
+class EventAdapter(application: Application) : RecyclerView.Adapter<EventAdapter.MyViewHolder>() {
+
+    private val toDoDao = ToDoDatabase.getDatabase(application).toDoDao()
+    var dataList: LiveData<List<ToDoData>> = toDoDao.getAllData()
 
     class MyViewHolder(private val binding: RowLayoutBinding) :
         RecyclerView.ViewHolder(binding.root) {
