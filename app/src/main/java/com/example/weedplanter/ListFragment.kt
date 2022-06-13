@@ -2,6 +2,7 @@ package com.example.weedplanter
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
@@ -22,9 +23,10 @@ class ListFragment : Fragment() {
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
-    private val sharedViewModel: ToDoViewModel by activityViewModels()
+    private val mToDoViewModel: ToDoViewModel by activityViewModels()
 
     private val adapter: EventAdapter by lazy { EventAdapter() }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -40,6 +42,11 @@ class ListFragment : Fragment() {
         recyclerView.adapter = adapter
         recyclerView.layoutManager =
             StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
+        mToDoViewModel.sortByTime.observe(
+            viewLifecycleOwner
+        ) {
+            adapter.setData(it)
+        }
     }
 
 

@@ -22,6 +22,7 @@ class ToDoDiffUtil(
     override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
         return oldList[oldItemPosition].id == newList[newItemPosition].id
                 && oldList[oldItemPosition].title == newList[newItemPosition].title
+                && oldList[oldItemPosition].time == newList[newItemPosition].time
                 && oldList[oldItemPosition].description == newList[newItemPosition].description
     }
 }

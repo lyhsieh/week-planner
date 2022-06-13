@@ -22,10 +22,10 @@ import com.example.weedplanter.data.ToDoViewModel
 import com.example.weedplanter.databinding.ActivityMainBinding
 import com.example.weedplanter.databinding.RowLayoutBinding
 
-class EventAdapter(application: Application) : RecyclerView.Adapter<EventAdapter.MyViewHolder>() {
+class EventAdapter() : RecyclerView.Adapter<EventAdapter.MyViewHolder>() {
 
-    private val toDoDao = ToDoDatabase.getDatabase(application).toDoDao()
-    var dataList: LiveData<List<ToDoData>> = toDoDao.getAllData()
+
+    var dataList = emptyList<ToDoData>()
 
     class MyViewHolder(private val binding: RowLayoutBinding) :
         RecyclerView.ViewHolder(binding.root) {
