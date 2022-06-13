@@ -30,10 +30,10 @@ class ToDoViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
-    fun deleteItem(toDoData: ToDoData) {
+    fun deleteItem(id: Int) {
         viewModelScope.launch(Dispatchers.IO)
         {
-            repository.deleteItem(toDoData)
+            repository.deleteItem(id)
         }
     }
 
@@ -46,6 +46,8 @@ class ToDoViewModel(application: Application) : AndroidViewModel(application) {
     fun searchByIdDatabase(searchQuery: Int): LiveData<ToDoData> {
         return repository.searchByIdDatabase(searchQuery)
     }
+
+
     fun searchDatabase(searchQuery: String): LiveData<List<ToDoData>> {
         return repository.searchDatabase(searchQuery)
     }

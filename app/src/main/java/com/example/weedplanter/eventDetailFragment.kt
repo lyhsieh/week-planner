@@ -20,17 +20,19 @@ class EventDetailFragment : Fragment() {
     private var _binding: EventDetailBinding? = null
 
     lateinit var  data: LiveData<ToDoData>
+    lateinit var  datadead: ToDoData
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
-    private val viewModel = MyGardenViewModel()
+    private val mToDoViewModel: ToDoViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         _binding = EventDetailBinding.inflate(inflater, container, false)
-
+        var dataid: Int = navigationArgs.data
+        data  = mToDoViewModel.searchByIdDatabase(dataid)
         _binding!!.eventDetailFragment = this@EventDetailFragment
         return binding.root
     }
@@ -47,7 +49,8 @@ class EventDetailFragment : Fragment() {
         findNavController().navigate(R.id.action_addNewEventFragment_to_listFragment)
     }
     fun finish() {
-
+        var dataid: Int = navigationArgs.data
+        mToDoViewModel.deleteItem(dataid)
 
         findNavController().navigate(R.id.action_eventDetailFragment_to_congratsFragment)
     }
