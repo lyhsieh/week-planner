@@ -46,4 +46,8 @@ class ToDoViewModel(application: Application) : AndroidViewModel(application) {
         return repository.searchDatabase(searchQuery)
     }
 
+    fun verifyData(title: String, time: String): Boolean {
+        return !(title.isEmpty() || time.isEmpty())
+    }
+
 }

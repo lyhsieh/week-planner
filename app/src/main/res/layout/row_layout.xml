@@ -5,7 +5,6 @@
     <variable
         name="toDoData"
         type="com.example.weedplanter.data.ToDoData" />
-
 </data>
 
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -29,6 +28,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:text="@{toDoData.title}"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -39,6 +39,7 @@
             android:id="@+id/ToDoTime"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:text="@{toDoData.time}"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
