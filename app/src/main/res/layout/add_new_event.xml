@@ -62,7 +62,7 @@
         android:id="@+id/time_text_input"
         android:layout_width="304dp"
         android:layout_height="52dp"
-        android:hint="@string/enter_tour_time_here"
+        android:hint="@string/enter_your_time_here"
         android:inputType="text"
         app:layout_constraintStart_toStartOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@id/textView3"
