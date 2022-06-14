@@ -44,7 +44,7 @@ class CongratsFragment : Fragment() {
         _binding!!.congratsFragment = this@CongratsFragment
 
         if(randomValues < 20) {
-            viewModel.rewardApple()
+            GlobalVariable.rewardApple()
 //            binding.imageView.setImageDrawable(R.drawable.apple)
             binding.imageView.setImageResource(R.drawable.apple)
             // fruit = R.drawable.apple
@@ -54,7 +54,7 @@ class CongratsFragment : Fragment() {
             }
         }
         else if (randomValues < 40) {
-            viewModel.rewardBanana()
+            GlobalVariable.rewardBanana()
             binding.imageView.setImageResource(R.drawable.banana)
             GlobalScope.launch(Dispatchers.IO + coroutineExceptionHandler) {
                 fruitEventRepo.uploadFruitEvent("User", "banana tree")
@@ -63,7 +63,7 @@ class CongratsFragment : Fragment() {
             //fruitImage!!.setImageResource(R.drawable.apple)
         }
         else if (randomValues < 60) {
-            viewModel.rewardWatermelon()
+            GlobalVariable.rewardWatermelon()
             binding.imageView.setImageResource(R.drawable.watermelon)
             GlobalScope.launch(Dispatchers.IO + coroutineExceptionHandler) {
                 fruitEventRepo.uploadFruitEvent("User", "watermelon")
@@ -73,7 +73,7 @@ class CongratsFragment : Fragment() {
         }
         else if (randomValues < 80) {
             binding.imageView.setImageResource(R.drawable.grape)
-            viewModel.rewardGrape()
+            GlobalVariable.rewardGrape()
             GlobalScope.launch(Dispatchers.IO + coroutineExceptionHandler) {
                 fruitEventRepo.uploadFruitEvent("User", "grape tree")
             }
@@ -82,7 +82,7 @@ class CongratsFragment : Fragment() {
         }
         else  {
             binding.imageView.setImageResource(R.drawable.lemon)
-            viewModel.rewardLemon()
+            GlobalVariable.rewardLemon()
             GlobalScope.launch(Dispatchers.IO + coroutineExceptionHandler) {
                 fruitEventRepo.uploadFruitEvent("User", "lemon tree")
             }

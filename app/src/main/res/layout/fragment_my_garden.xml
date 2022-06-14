@@ -1,256 +1,247 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MyGardenFragment">
-    <!--    <data>-->
-    <!--        <variable-->
-    <!--            name="viewModel"-->
-    <!--            type="com.example.weedplanter.MyGarden" />-->
-    <!--    </data>-->
-    <androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.weedplanter.MyGardenViewModel" />
+        <variable
+            name="myGardenFragment"
+            type="com.example.weedplanter.MyGardenFragment"/>
+    </data>
+
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:context=".MyGardenFragment">
 
-        <ImageView
-            android:id="@+id/banana2"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:layout_marginStart="64dp"
-            android:visibility="invisible"
-            android:contentDescription="@string/my_garden"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.432"
-            app:srcCompat="@drawable/banana" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/apple1"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/apple"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@+id/banana2"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="64dp"
+                android:visibility="invisible"
+                android:contentDescription="@string/my_garden"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.432"
+                app:srcCompat="@drawable/banana" />
 
-
-        <ImageView
-            android:id="@+id/banana1"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:layout_marginEnd="16dp"
-            android:contentDescription="@string/my_garden"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/apple1"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/banana" />
-
-        <ImageView
-            android:id="@+id/banana3"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:visibility="invisible"
-            android:layout_marginStart="36dp"
-            android:contentDescription="@string/my_garden"
-
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.576"
-            app:srcCompat="@drawable/banana" />
-        <ImageView
-            android:id="@+id/lemon3"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:layout_marginEnd="76dp"
-            android:contentDescription="@string/my_garden"
-            android:visibility="invisible"
-
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.446"
-            app:srcCompat="@drawable/lemon" />
-        <ImageView
-            android:id="@+id/apple3"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:layout_marginStart="112dp"
-            android:contentDescription="@string/my_garden"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:visibility="invisible"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.643"
-            app:srcCompat="@drawable/apple" />
-
-        <ImageView
-            android:id="@+id/lemon2"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:layout_marginEnd="24dp"
-            android:contentDescription="@string/my_garden"
-
-            android:visibility="invisible"
-
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.396"
-            app:srcCompat="@drawable/lemon" />
+            <ImageView
+                android:id="@+id/apple1"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/apple"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
 
+            <ImageView
+                android:id="@+id/banana1"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="@string/my_garden"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/apple1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/banana" />
 
-        <ImageView
-            android:id="@+id/lemon1"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:layout_marginStart="40dp"
-            android:visibility="invisible"
-            android:contentDescription="@string/my_garden"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/apple1"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.525"
-            app:srcCompat="@drawable/lemon" />
+            <ImageView
+                android:id="@+id/banana3"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:visibility="invisible"
+                android:layout_marginStart="36dp"
+                android:contentDescription="@string/my_garden"
 
-        <ImageView
-            android:id="@+id/apple2"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:layout_marginEnd="88dp"
-            android:contentDescription="@string/my_garden"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:visibility="invisible"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.576"
-            app:srcCompat="@drawable/apple" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.576"
+                app:srcCompat="@drawable/banana" />
+            <ImageView
+                android:id="@+id/lemon3"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginEnd="76dp"
+                android:contentDescription="@string/my_garden"
+                android:visibility="invisible"
 
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.446"
+                app:srcCompat="@drawable/lemon" />
+            <ImageView
+                android:id="@+id/apple3"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="112dp"
+                android:contentDescription="@string/my_garden"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:visibility="invisible"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.643"
+                app:srcCompat="@drawable/apple" />
 
-        <ImageView
-            android:id="@+id/grape3"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:layout_marginEnd="24dp"
-            android:contentDescription="@string/my_garden"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.674"
-            app:srcCompat="@drawable/grape" />
+            <ImageView
+                android:id="@+id/lemon2"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginEnd="24dp"
+                android:contentDescription="@string/my_garden"
 
-        <ImageView
-            android:id="@+id/grape2"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:layout_marginEnd="104dp"
-            android:contentDescription="@string/my_garden"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.674"
-            app:srcCompat="@drawable/grape" />
+                android:visibility="invisible"
 
-        <ImageView
-            android:id="@+id/grape1"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:contentDescription="@string/my_garden"
-            android:visibility="invisible"
-
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.721"
-            app:srcCompat="@drawable/grape" />
-
-        <ImageView
-            android:id="@+id/watermelon3"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginEnd="128dp"
-            android:contentDescription="@string/my_garden"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.757"
-            app:srcCompat="@drawable/watermelon" />
-
-        <ImageView
-            android:id="@+id/watermelon2"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginEnd="184dp"
-            android:contentDescription="@string/my_garden"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.817"
-            app:srcCompat="@drawable/watermelon" />
-
-        <ImageView
-            android:id="@+id/watermelon1"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginEnd="88dp"
-            android:contentDescription="@string/my_garden"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.817"
-            app:srcCompat="@drawable/watermelon" />
-
-        <TextView
-            android:id="@+id/my_garden_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:textSize="40sp"
-            android:text="@string/my_garden"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:text="@string/back"
-            android:textSize="30sp"
-
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.25"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <Button
-            android:id="@+id/toFriendsGardenbutton"
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:text="Friends' garden"
-            android:textSize="16sp"
-
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.8"
-            app:layout_constraintStart_toStartOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.396"
+                app:srcCompat="@drawable/lemon" />
 
 
-</FrameLayout>
+
+            <ImageView
+                android:id="@+id/lemon1"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="40dp"
+                android:visibility="invisible"
+                android:contentDescription="@string/my_garden"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/apple1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.525"
+                app:srcCompat="@drawable/lemon" />
+
+            <ImageView
+                android:id="@+id/apple2"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginEnd="88dp"
+                android:contentDescription="@string/my_garden"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:visibility="invisible"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.576"
+                app:srcCompat="@drawable/apple" />
+
+
+            <ImageView
+                android:id="@+id/grape3"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginEnd="24dp"
+                android:contentDescription="@string/my_garden"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.674"
+                app:srcCompat="@drawable/grape" />
+
+            <ImageView
+                android:id="@+id/grape2"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginEnd="104dp"
+                android:contentDescription="@string/my_garden"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.674"
+                app:srcCompat="@drawable/grape" />
+
+            <ImageView
+                android:id="@+id/grape1"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:contentDescription="@string/my_garden"
+                android:visibility="invisible"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.721"
+                app:srcCompat="@drawable/grape" />
+
+            <ImageView
+                android:id="@+id/watermelon3"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginEnd="128dp"
+                android:contentDescription="@string/my_garden"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.757"
+                app:srcCompat="@drawable/watermelon" />
+
+            <ImageView
+                android:id="@+id/watermelon2"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginEnd="184dp"
+                android:contentDescription="@string/my_garden"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.817"
+                app:srcCompat="@drawable/watermelon" />
+
+            <ImageView
+                android:id="@+id/watermelon1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginEnd="88dp"
+                android:contentDescription="@string/my_garden"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.817"
+                app:srcCompat="@drawable/watermelon" />
+
+            <TextView
+                android:id="@+id/my_garden_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textSize="40sp"
+                android:text="@string/my_garden"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="@string/back"
+                android:textSize="30sp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </FrameLayout>
+</layout>
