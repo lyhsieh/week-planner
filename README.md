@@ -27,23 +27,27 @@ This project exists thanks to all the people who contribute.
 
 1. Home page (to-do list **today**)
 
-![](img/today.png)
+<img src="img/today.png" width=40%>
+
 
 1. Add an event
 
-![](img/add.png)
+<img src="img/add.png" width=40%>
 
-1. Detailed description of an event
 
-![](img/dog.png)
+2. Detailed description of an event
 
-1. Get a random rewad after finishing an event
+<img src="img/dog.png" width=40%>
 
-![](img/watermelon.png)
 
-1. My garden (So beautiful, isn't it?)
+3. Get a random rewad after finishing an event
 
-![](img/garden.png)
+<img src="img/watermelon.png" width=40%>
+
+
+4. My garden (So beautiful, isn't it?)
+
+<img src="img/garden.png" width=40%>
 
 ## Contributions
 Pull requests are always welcome!
