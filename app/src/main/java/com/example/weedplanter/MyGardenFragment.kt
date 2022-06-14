@@ -72,7 +72,9 @@ class MyGardenFragment : Fragment() {
         Log.d("GardenFragmentWater", sharedViewModel.watermelon.toString())
         setView()
         binding?.button2?.setOnClickListener{back()}
-
+        binding.toFriendsGardenbutton.setOnClickListener{
+            findNavController().navigate(R.id.action_myGardenFragment_to_friendsGardenFragment)
+        }
     }
 
 
