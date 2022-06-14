@@ -24,14 +24,19 @@ This project exists thanks to all the people who contribute.
 1. Launch [Android Studio](https://developer.android.com/studio) and run the app
 
 ## App Overview
+
 1. Home page (to-do list **today**)
 ![](img/today.png)
+
 1. Add an event
 ![](img/add.png)
+
 1. Detailed description of an event
 ![](img/dog.png)
-1. Get a random reward after finishing an event
+
+1. Get a random rewad after finishing an event
 ![](img/watermelon.png)
+
 1. My garden (So beautiful, isn't it?)
 ![](img/garden.png)
 
