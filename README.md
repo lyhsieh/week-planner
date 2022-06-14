@@ -27,27 +27,27 @@ This project exists thanks to all the people who contribute.
 
 1. Home page (to-do list **today**)
 
-<img src="img/today.png" width=40%>
+<img src="img/today.png" width=20%>
 
 
 1. Add an event
 
-<img src="img/add.png" width=40%>
+<img src="img/add.png" width=20%>
 
 
 2. Detailed description of an event
 
-<img src="img/dog.png" width=40%>
+<img src="img/dog.png" width=20%>
 
 
 3. Get a random rewad after finishing an event
 
-<img src="img/watermelon.png" width=40%>
+<img src="img/watermelon.png" width=20%>
 
 
 4. My garden (So beautiful, isn't it?)
 
-<img src="img/garden.png" width=40%>
+<img src="img/garden.png" width=20%>
 
 ## Contributions
 Pull requests are always welcome!
