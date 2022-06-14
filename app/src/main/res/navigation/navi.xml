@@ -42,5 +42,17 @@
         <argument
         android:name="data"
         app:argType="integer" />
+        <action
+            android:id="@+id/action_eventDetailFragment_to_congratsFragment"
+            app:destination="@id/congratsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/congratsFragment"
+        android:name="com.example.weedplanter.CongratsFragment"
+        android:label="congrats"
+        tools:layout="@layout/congrats" >
+        <action
+            android:id="@+id/action_congratsFragment_to_myGardenFragment"
+            app:destination="@id/myGardenFragment" />
     </fragment>
 </navigation>

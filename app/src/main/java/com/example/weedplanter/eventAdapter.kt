@@ -15,6 +15,7 @@ import androidx.annotation.RequiresApi
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.weedplanter.data.ToDoData
 import com.example.weedplanter.data.ToDoDatabase
@@ -22,7 +23,8 @@ import com.example.weedplanter.data.ToDoViewModel
 import com.example.weedplanter.databinding.ActivityMainBinding
 import com.example.weedplanter.databinding.RowLayoutBinding
 
-class EventAdapter() : RecyclerView.Adapter<EventAdapter.MyViewHolder>() {
+class EventAdapter( private val clickListener: (ToDoData) -> Unit
+) : ListAdapter<ToDoData, EventAdapter.MyViewHolder>(DiffCallback) {
 
 
     var dataList = emptyList<ToDoData>()
@@ -44,14 +46,27 @@ class EventAdapter() : RecyclerView.Adapter<EventAdapter.MyViewHolder>() {
         }
 
     }
+    companion object DiffCallback: DiffUtil.ItemCallback<ToDoData>() {
+        override fun areItemsTheSame(oldItem: ToDoData, newItem: ToDoData): Boolean {
+            return oldItem.id == newItem.id
+        }
 
+        override fun areContentsTheSame(oldItem: ToDoData, newItem: ToDoData): Boolean {
+            return oldItem == newItem
+        }
+
+    }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         return MyViewHolder.from(parent)
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentItem = dataList[position]
+        holder.itemView.setOnClickListener{
+            clickListener(currentItem)
+        }
         holder.bind(currentItem)
+
 
     }
 

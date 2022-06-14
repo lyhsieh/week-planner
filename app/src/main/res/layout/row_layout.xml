@@ -36,7 +36,7 @@
             android:layout_marginTop="8dp"
             android:clickable="true"
             android:focusable="true"
-            android:onClickListener='@{() -> listFragment.detail0()}'
+            android:onClickListener='@{() -> listFragment.detail(toDoData.id)}'
             android:text="@{toDoData.title}"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textSize="20sp"

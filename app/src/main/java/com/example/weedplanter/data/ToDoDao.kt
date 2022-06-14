@@ -16,8 +16,8 @@ interface ToDoDao {
     @Update
     suspend fun updateData(toDoData: ToDoData)
 
-    @Delete
-    suspend fun deleteItem(toDoData: ToDoData)
+    @Query("DELETE FROM todo_table WHERE id LIKE :Query")
+    suspend fun deleteItem(Query: Int)
 
     @Query("DELETE FROM todo_table")
     suspend fun deleteAll()
@@ -27,6 +27,9 @@ interface ToDoDao {
 
     @Query("SELECT * FROM todo_table WHERE id LIKE :searchQuery")
     fun searchByIdDatabase(searchQuery: Int) : LiveData<ToDoData>
+
+    @Query("SELECT * FROM todo_table WHERE id LIKE :searchQuery")
+    fun searchByIdsDatabase(searchQuery: Int) : ToDoData
 
     @Query("SELECT * FROM todo_table ORDER BY time")
     fun sortByTime(): LiveData<List<ToDoData>>
