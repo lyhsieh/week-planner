@@ -4,6 +4,7 @@ plugins {
     id 'kotlin-parcelize'
     id 'kotlin-kapt'
     id 'androidx.navigation.safeargs'
+    id("com.apollographql.apollo3").version("3.1.0")
 }
 
 apply plugin: 'kotlin-kapt'
@@ -39,7 +40,14 @@ android {
     }
 }
 
+apollo {
+    packageName.set("com.example.weedplanter")
+}
+
 dependencies {
+    // Apollo Client
+    implementation("com.apollographql.apollo3:apollo-runtime:3.1.0")
+    implementation("com.apollographql.apollo:apollo-coroutines-support:2.5.4")
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1'

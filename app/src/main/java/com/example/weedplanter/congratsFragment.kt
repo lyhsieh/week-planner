@@ -8,6 +8,11 @@ import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.weedplanter.databinding.CongratsBinding
+import com.example.weedplanter.fruitEventRepo.FruitEventRepo
+import kotlinx.coroutines.CoroutineExceptionHandler
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import kotlin.random.Random
 
 
@@ -18,6 +23,10 @@ class CongratsFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
     private val viewModel = MyGardenViewModel()
+    private val fruitEventRepo = FruitEventRepo()
+    private val coroutineExceptionHandler = CoroutineExceptionHandler{_, throwable ->
+        throwable.printStackTrace()
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,35 +44,48 @@ class CongratsFragment : Fragment() {
         _binding!!.congratsFragment = this@CongratsFragment
 
         if(randomValues < 20) {
-            viewModel.rewardApple()
+            GlobalVariable.rewardApple()
 //            binding.imageView.setImageDrawable(R.drawable.apple)
             binding.imageView.setImageResource(R.drawable.apple)
             // fruit = R.drawable.apple
 //            fruitImage!!.setImageResource(R.drawable.apple)
+            GlobalScope.launch(Dispatchers.IO + coroutineExceptionHandler) {
+                fruitEventRepo.uploadFruitEvent("User", "apple tree")
+            }
         }
         else if (randomValues < 40) {
-            viewModel.rewardBanana()
+            GlobalVariable.rewardBanana()
             binding.imageView.setImageResource(R.drawable.banana)
-
+            GlobalScope.launch(Dispatchers.IO + coroutineExceptionHandler) {
+                fruitEventRepo.uploadFruitEvent("User", "banana tree")
+            }
             //fruit = R.drawable.apple
             //fruitImage!!.setImageResource(R.drawable.apple)
         }
         else if (randomValues < 60) {
-            viewModel.rewardWatermelon()
+            GlobalVariable.rewardWatermelon()
             binding.imageView.setImageResource(R.drawable.watermelon)
-
+            GlobalScope.launch(Dispatchers.IO + coroutineExceptionHandler) {
+                fruitEventRepo.uploadFruitEvent("User", "watermelon")
+            }
             //fruit = R.drawable.apple
             //fruitImage!!.setImageResource(R.drawable.apple)
         }
         else if (randomValues < 80) {
             binding.imageView.setImageResource(R.drawable.grape)
-            viewModel.rewardGrape()
+            GlobalVariable.rewardGrape()
+            GlobalScope.launch(Dispatchers.IO + coroutineExceptionHandler) {
+                fruitEventRepo.uploadFruitEvent("User", "grape tree")
+            }
             //fruit = R.drawable.apple
             //fruitImage!!.setImageResource(R.drawable.apple)
         }
         else  {
             binding.imageView.setImageResource(R.drawable.lemon)
-            viewModel.rewardLemon()
+            GlobalVariable.rewardLemon()
+            GlobalScope.launch(Dispatchers.IO + coroutineExceptionHandler) {
+                fruitEventRepo.uploadFruitEvent("User", "lemon tree")
+            }
             //fruit = R.drawable.apple
             //fruitImage!!.setImageResource(R.drawable.apple)
         }

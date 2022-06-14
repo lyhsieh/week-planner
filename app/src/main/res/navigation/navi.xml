@@ -7,7 +7,7 @@
     <fragment
         android:id="@+id/listFragment"
         android:name="com.example.weedplanter.ListFragment"
-        android:label="ListFragment" >
+        android:label="List of to-dos" >
         <action
             android:id="@+id/action_listFragment_to_addNewEventFragment"
             app:destination="@id/addNewEventFragment" />
@@ -21,7 +21,7 @@
     <fragment
         android:id="@+id/addNewEventFragment"
         android:name="com.example.weedplanter.AddNewEventFragment"
-        android:label="AddNewEventFragment" >
+        android:label="Add new event" >
         <action
             android:id="@+id/action_addNewEventFragment_to_listFragment"
             app:destination="@id/listFragment" />
@@ -29,16 +29,19 @@
     <fragment
         android:id="@+id/myGardenFragment"
         android:name="com.example.weedplanter.MyGardenFragment"
-        android:label="fragment_my_garden"
+        android:label="My garden"
         tools:layout="@layout/fragment_my_garden" >
         <action
             android:id="@+id/action_myGardenFragment_to_listFragment"
             app:destination="@id/listFragment" />
+        <action
+            android:id="@+id/action_myGardenFragment_to_friendsGardenFragment"
+            app:destination="@id/friendsGardenFragment" />
     </fragment>
     <fragment
         android:id="@+id/eventDetailFragment"
         android:name="com.example.weedplanter.EventDetailFragment"
-        android:label="EventDetailFragment" >
+        android:label="Event Detail" >
         <argument
         android:name="data"
         app:argType="integer" />
@@ -49,10 +52,19 @@
     <fragment
         android:id="@+id/congratsFragment"
         android:name="com.example.weedplanter.CongratsFragment"
-        android:label="congrats"
+        android:label="Congratulations"
         tools:layout="@layout/congrats" >
         <action
             android:id="@+id/action_congratsFragment_to_myGardenFragment"
+            app:destination="@id/myGardenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/friendsGardenFragment"
+        android:name="com.example.weedplanter.fruitEventRepo.FriendsGardenFragment"
+        android:label="Friends' garden" >
+
+        <action
+            android:id="@+id/action_friendsGardenFragment_to_myGardenFragment"
             app:destination="@id/myGardenFragment" />
     </fragment>
 </navigation>
