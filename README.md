@@ -32,8 +32,9 @@ This project exists thanks to all the people who contribute.
 
 1. Add an event
 
+<center>
 <img src="img/add.png" width=30%>
-
+</center>
 
 2. Detailed description of an event
 
