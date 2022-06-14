@@ -32,9 +32,7 @@ This project exists thanks to all the people who contribute.
 
 1. Add an event
 
-<center>
 <img src="img/add.png" width=30%>
-</center>
 
 2. Detailed description of an event
 
@@ -51,6 +49,6 @@ This project exists thanks to all the people who contribute.
 <img src="img/garden.png" width=30%>
 
 ## Contributions
-Pull requests are always welcome!
+Pull requests are always welcome! (There are still some bugs and unimplemented parts. QQ)
 
 All code is licensed under the [MIT License](https://github.com/LeoTheBestCoder/weed-planter/blob/main/LICENSE).
