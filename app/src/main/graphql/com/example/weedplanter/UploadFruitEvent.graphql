@@ -1,0 +1,7 @@
+mutation UploadFruitEventMutation($userName: String!, $fruit: String!) {
+  uploadFruitEvent(userName: $userName, fruit: $fruit) {
+    id
+    username
+    fruit
+  }
+}

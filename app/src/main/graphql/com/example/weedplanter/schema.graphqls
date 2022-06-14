@@ -1,0 +1,13 @@
+type Query {
+    getFruitEvents: [FruitEvent!]
+}
+
+type FruitEvent {
+    id: ID!
+    username: String!
+    fruit: String!
+}
+
+type Mutation {
+    uploadFruitEvent( userName: String!, fruit: String! ): FruitEvent
+}

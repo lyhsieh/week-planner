@@ -54,18 +54,17 @@
         android:layout_marginBottom="40dp"
         />
 
-    <Button
-        android:id="@+id/button_my_garden"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/my_ngarden"
-        android:textSize="20sp"
-        android:layout_marginBottom="40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/button_w_mode"
-        android:layout_marginStart="20dp"
-        android:onClick='@{() -> listFragment.myGarden()}'
-        />
+        <Button
+            android:id="@+id/button_my_garden"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:onClick='@{() -> listFragment.myGarden()}'
+            android:text="@string/my_ngarden"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button_add"
+            app:layout_constraintStart_toEndOf="@id/button_w_mode" />
 
     <Button
         android:id="@+id/button_add"
