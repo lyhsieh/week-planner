@@ -17,7 +17,7 @@ This project exists thanks to all the people who contribute.
     ```
     cd weed-planter/server
     ```
-1. Launch the server ([Node.js](https://nodejs.org/en/) required)
+1. Launch the server ([Node.js](https://nodejs.org/en/) is required)
     ```
     npm start
     ```
