@@ -36,26 +36,33 @@ class CongratsFragment : Fragment() {
 
         if(randomValues < 20) {
             viewModel.rewardApple()
-            //binding.imageView.setImageDrawable(R.drawable.arrow_down_float)
+//            binding.imageView.setImageDrawable(R.drawable.apple)
+            binding.imageView.setImageResource(R.drawable.apple)
             // fruit = R.drawable.apple
-            //fruitImage!!.setImageResource(R.drawable.apple)
+//            fruitImage!!.setImageResource(R.drawable.apple)
         }
         else if (randomValues < 40) {
             viewModel.rewardBanana()
+            binding.imageView.setImageResource(R.drawable.banana)
+
             //fruit = R.drawable.apple
             //fruitImage!!.setImageResource(R.drawable.apple)
         }
         else if (randomValues < 60) {
             viewModel.rewardWatermelon()
+            binding.imageView.setImageResource(R.drawable.watermelon)
+
             //fruit = R.drawable.apple
             //fruitImage!!.setImageResource(R.drawable.apple)
         }
         else if (randomValues < 80) {
+            binding.imageView.setImageResource(R.drawable.grape)
             viewModel.rewardGrape()
             //fruit = R.drawable.apple
             //fruitImage!!.setImageResource(R.drawable.apple)
         }
         else  {
+            binding.imageView.setImageResource(R.drawable.lemon)
             viewModel.rewardLemon()
             //fruit = R.drawable.apple
             //fruitImage!!.setImageResource(R.drawable.apple)
