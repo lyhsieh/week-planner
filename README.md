@@ -17,9 +17,9 @@ This project exists thanks to all the people who contribute.
     ```
     cd weed-planter/server
     ```
-1. Launch the server ([`Node.js`](https://nodejs.org/en/) required)
+1. Launch the server ([Node.js](https://nodejs.org/en/) required)
     ```
     npm start
     ```
-1. Launch [`Android Studio`](https://developer.android.com/studio) and run the app
+1. Launch [Android Studio](https://developer.android.com/studio) and run the app
 
