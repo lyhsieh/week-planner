@@ -39,7 +39,7 @@ This project exists thanks to all the people who contribute.
     <img src="img/dog.png" width=30%>
 
 
-1. Get a random rewad after finishing an event
+1. Get a random reward after finishing an event
 
     <img src="img/watermelon.png" width=30%>
 
